@@ -1,0 +1,86 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: rgba(237, 229, 223, 0.5);
+}
+
+h2 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+li {
+  margin: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(13, 13, 13, 0.941);
+  border-bottom: 1px double rgba(13, 13, 13, 0.941);
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+}
+
+input {
+  display: block;
+  margin: 20px 0;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border: solid rgb(188, 182, 182) 1px;
+  border-radius: 10px;
+}
+
+form {
+  border: 1px solid rgb(189, 184, 184);
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: white;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  padding: 0.8em;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  
+}
+
+.btn-signup {
+  background-color: green;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+}
+
+.btn-signup:hover, 
+.btn-signup:active {
+  background-color: rgb(21, 197, 21);
+}
+
+.btn-signup:active {
+  transform: translateY(2px);
+}
+
+
