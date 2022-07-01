@@ -84,6 +84,7 @@ form {
   color: red;
   margin: 0;
   font-size: 0.8rem;
+  display: none;
 }
 
 .input-field {
