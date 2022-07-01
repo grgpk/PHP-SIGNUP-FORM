@@ -1,6 +1,12 @@
 <?php
 
+$errors = [];
 
+include('./classes/form-validation.php');
+if (count($_POST) > 0) {
+  $validator = new Validator($_POST);
+  $errors = $validator->validateForm();
+}
 
 
 
