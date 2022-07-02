@@ -1,9 +1,10 @@
 <?php
-
+include('./classes/user.php');
 include('./classes/form-validation.php');
-require_once('./db-connection.php');
+include_once('./classes/db-connection.php');
 
 $errors = [];
+$connection = Connect_db::connect();
 
 if (count($_POST) > 0) {
   $validator = new Validator($_POST);
@@ -12,17 +13,11 @@ if (count($_POST) > 0) {
   if (count($errors) > 0) {
     echo json_encode($errors);
   } else {
-
-    $sql_query = "INSERT INTO users (firstName, lastName, email) VALUES (?, ?, ?)";
-    $prepared = $connection->prepare($sql_query);
-    $prepared->execute([$_POST['firstName'], $_POST['lastName'], $_POST['email']]);
-
-    echo 'success';
+    $users = new Users();
+    $users->addUser($connection);
   }
-
-  exit();
+  exit;
 }
-
 
 ?>
 
@@ -32,6 +27,10 @@ if (count($_POST) > 0) {
 <?php include('./templates/header.php'); ?>
 
 <main>
+
+  <div class="success-notification">
+    Successful sign up
+  </div>
 
   <section class="signup">
 

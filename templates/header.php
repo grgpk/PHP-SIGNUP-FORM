@@ -9,7 +9,7 @@
   <script>
   $(document).ready(() => {
 
-    $('.btn-signup').click((e) => {
+    $('.btn-signup').click(() => {
 
       const firstName = $('input[name=firstName]').val();
       const lastName = $('input[name=lastName]').val();
@@ -26,10 +26,10 @@
         success: (data) => {
           if (data === 'success') {
             $('.error').hide();
-
+            $('.success-notification').show();
 
           } else {
-
+            console.log(data);
             const errors = JSON.parse(data);
             const errorFields = ['firstName', 'lastName', 'email'];
 
@@ -46,8 +46,20 @@
             }
           }
         },
-        error: (xhr, status, error) => {
-          console.log(error);
+      })
+    })
+
+    $('.btn-delete').click(function() {
+      const id = $(this).attr('data-id');
+      $.ajax({
+        type: 'POST',
+        url: 'users.php',
+        data: {
+          id
+        },
+
+        success: () => {
+          $(this).closest('tr').remove();
         }
       })
     })

@@ -1,7 +1,7 @@
 <form>
   <h2>Sign up</h2>
   <p class="input-field">
-    <input type=" text" placeholder="First Name" name="firstName" autofocus>
+    <input type="text" placeholder="First Name" name="firstName" autofocus>
 
     <span class="error firstName-error"></span>
 
