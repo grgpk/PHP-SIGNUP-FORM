@@ -34,6 +34,7 @@ class Users
       exit();
     } else {
       echo false;
+      exit();
     }
   }
 }
