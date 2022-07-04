@@ -29,7 +29,7 @@ if (count($_POST) > 0) {
 <main>
 
   <div class="success-notification">
-    Successful sign up
+    <!-- Successful sign up -->
   </div>
 
   <section class="signup">

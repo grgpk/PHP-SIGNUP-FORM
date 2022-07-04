@@ -26,7 +26,7 @@
         success: (data) => {
           if (data === 'success') {
             $('.error').hide();
-            $('.success-notification').show();
+            $('.success-notification').html('Successful sign up').show();
 
           } else {
             console.log(data);
@@ -58,9 +58,18 @@
           id
         },
 
-        success: () => {
-          $(this).closest('tr').remove();
-        }
+        success: (res) => {
+          if (res) {
+            const username = $(this).attr('data-user');
+            $(this).closest('tr').remove();
+            $('.success-notification').html(`${username} was removed!`).show();
+            window.scroll({
+              top: 0,
+              left: 0,
+              behavior: 'smooth'
+            })
+          }
+        },
       })
     })
   })

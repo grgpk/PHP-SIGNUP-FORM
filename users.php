@@ -7,11 +7,7 @@ $connection = Connect_db::connect();
 $users = new Users();
 $usersList = $users->getUsers($connection);
 
-if (isset($_POST['id'])) {
-
-  $users->removeUser($connection);
-}
-
+$users->removeUser($connection);
 
 ?>
 
@@ -20,7 +16,9 @@ if (isset($_POST['id'])) {
 
 
 <?php include('./templates/header.php') ?>
+<div class="success-notification">
 
+</div>
 
 <section class="users">
   <h1>Users table</h1>
@@ -40,7 +38,8 @@ if (isset($_POST['id'])) {
         <td><?= $user['lastName'] ?></td>
         <td><?= $user['email'] ?></td>
         <td>
-          <button type="button" class="btn btn-delete" data-id="<?= $user['id'] ?>">Delete</button>
+          <button type="button" class="btn btn-delete" data-user="<?= $user['firstName'] . ' ' . $user['lastName'] ?>"
+            data-id="<?= $user['id'] ?>">Delete</button>
         </td>
       </tr>
       <?php endforeach ?>

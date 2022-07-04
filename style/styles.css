@@ -110,3 +110,9 @@ h1 {
 .btn-delete:active {
   background-color: #ff4d4d;
 }
+.notification {
+  display: none;
+  text-align: center;
+  width: 500px;
+  background-color: #0cb30c;
+}

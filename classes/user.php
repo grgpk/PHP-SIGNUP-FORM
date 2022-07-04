@@ -30,8 +30,10 @@ class Users
 
       $sql_query = "DELETE FROM users WHERE id = $id";
       $connection->query($sql_query);
-
+      echo true;
       exit();
+    } else {
+      echo false;
     }
   }
 }
