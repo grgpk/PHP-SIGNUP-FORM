@@ -7,7 +7,10 @@ $connection = Connect_db::connect();
 $users = new Users();
 $usersList = $users->getUsers($connection);
 
-$users->removeUser($connection);
+if (isset($_POST['id'])) {
+
+  $users->removeUser($connection);
+}
 
 
 ?>
