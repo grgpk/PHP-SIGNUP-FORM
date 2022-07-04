@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  background-color: rgba(237, 229, 223, 0.5);
+  background-color: rgba(247, 201, 164, 0.5);
 }
 h2 {
   margin: 0;
@@ -109,10 +109,4 @@ h1 {
 .btn-delete:hover,
 .btn-delete:active {
   background-color: #ff4d4d;
-}
-.notification {
-  display: none;
-  text-align: center;
-  width: 500px;
-  background-color: #0cb30c;
 }
