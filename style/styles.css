@@ -106,3 +106,7 @@ h1 {
   background-color: red;
   color: white;
 }
+.btn-delete:hover,
+.btn-delete:active {
+  background-color: #ff4d4d;
+}

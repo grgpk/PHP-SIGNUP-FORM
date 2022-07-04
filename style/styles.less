@@ -6,6 +6,7 @@
 @table-border-color: rgb(96, 74, 74);
 @success-color: rgb(12, 179, 12);
 @warning-color: red;
+@warning-color-hover: lighten(@warning-color, 15%); 
 @fonts: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 @primary-font-size: 1rem;
 @border-radius: 10px;
@@ -135,4 +136,8 @@ h1 {
 .btn-delete {
   background-color: @warning-color;
   color: white;
+
+  &:hover, &:active {
+    background-color: @warning-color-hover;
+  }
 }
