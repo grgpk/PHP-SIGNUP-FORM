@@ -29,12 +29,13 @@ class Users
       $id = $_POST['id'];
 
       $sql_query = "DELETE FROM users WHERE id = $id";
-      $connection->query($sql_query);
-      echo true;
-      exit();
-    } else {
-      echo false;
-      exit();
+      if ($connection->query($sql_query)) {
+        echo true;
+        exit();
+      } else {
+        echo false;
+        exit();
+      }
     }
   }
 }
